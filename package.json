@@ -1,6 +1,6 @@
 {
-  "name": "node-ssh",
-  "version": "13.1.0",
+  "name": "node-ssh-no-cpu-features",
+  "version": "1.0.1",
   "description": "SSH2 with Promises",
   "main": "lib/cjs/index.js",
   "typings": "lib/typings/index.d.ts",
@@ -17,30 +17,29 @@
   "scripts": {
     "test": "ava",
     "lint": "(tsc -p . --noEmit) && (eslint . --ext .ts) && (prettier --list-different src/*.ts)",
-    "prepare": "yarn build:clean ; yarn build:cjs ; yarn build:esm ; yarn build:typings",
-    "build:clean": "rm -rf lib",
-    "build:esm": "tsc --module es2015 --target es2018 --outDir lib/esm && mv lib/esm/index.js lib/esm/index.mjs",
+    "build:clean": "rmdir /s /q lib",
+    "build:esm": "tsc --module es2015 --target es2018 --outDir lib/esm && move lib/esm/index.js lib/esm/index.mjs",
     "build:cjs": "tsc --module commonjs --target es2018 --outDir lib/cjs",
     "build:typings": "tsc --declaration --outDir lib/typings --emitDeclarationOnly"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/steelbrain/node-ssh.git"
+    "url": "git+https://github.com/Kuingsmile/node-ssh-no-cpu-features.git"
   },
   "keywords": [
     "ssh",
     "ssh2",
     "sftp"
   ],
-  "author": "steelbrain",
+  "author": "Kuingsmile",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/steelbrain/node-ssh/issues"
+    "url": "https://github.com/Kuingsmile/node-ssh-no-cpu-features/issues"
   },
   "files": [
     "lib/*"
   ],
-  "homepage": "https://github.com/steelbrain/node-ssh#readme",
+  "homepage": "https://github.com/Kuingsmile/node-ssh-no-cpu-features#readme",
   "devDependencies": {
     "@types/shell-escape": "^0.2.0",
     "ava": "^3.15.0",
@@ -57,7 +56,7 @@
     "sb-promise-queue": "^2.1.0",
     "sb-scandir": "^3.1.0",
     "shell-escape": "^0.2.0",
-    "ssh2": "^1.11.0"
+    "ssh2-no-cpu-features": "^1.0.0"
   },
   "ava": {
     "files": [

@@ -19,7 +19,7 @@ import SSH2, {
   AcceptConnection,
   RejectConnection,
   UNIXConnectionDetails,
-} from 'ssh2'
+} from 'ssh2-no-cpu-features'
 // eslint-disable-next-line import/no-extraneous-dependencies
 import { Prompt, Stats, TransferOptions } from 'ssh2-streams'
 
