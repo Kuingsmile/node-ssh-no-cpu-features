@@ -3,7 +3,7 @@ import path from 'path'
 import invariant from 'assert'
 import ChildProcess from 'child_process'
 import test, { ExecutionContext } from 'ava'
-import { Server } from 'ssh2'
+import { Server } from 'ssh2-no-cpu-features'
 
 import { NodeSSH } from '../src'
 import createServer from './ssh-server'
